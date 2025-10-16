@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Envio</title>
+
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.png">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href="assets/css/theme.css" rel="stylesheet" />
+    <style>
+        .card-img-bottom {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+        }
+        .hover-expand {
+            position: relative;
+            overflow: visible;
+            max-height: none;
+        }
+
+        /* md and up — apply hover-expand behavior */
+        @media (min-width: 768px) {
+            .hover-expand {
+                overflow: hidden;
+                max-height: 180px; /* collapsed (approx. 50%) */
+                transition: max-height 1s ease;
+            }
+
+                .hover-expand::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 60px;
+                    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+                    pointer-events: none;
+                    transition: opacity 1s ease;
+                }
+
+                /* expand when hover */
+                .hover-expand:hover {
+                    max-height: 800px; /* large enough for full content */
+                }
+
+                    /* fade disappears when hovered */
+                    .hover-expand:hover::after {
+                        opacity: 0;
+                    }
+        }
+        
+    </style>
+</head>
+
+
+  <body>
+
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="py-0 overflow-hidden">
+
+        <div class="bg-holder  bottom-0" style="background-image:url(undefined);background-image:linear-gradient(90deg, #0d2974 -11.17%, #3498db 110.39%);">
+        </div>
+        <!--/.bg-holder-->
+
+        <div class="container-fluid ">
+            <div class="bg-holder  bottom-0" style="background-image:url(assets/img/hero/background.png);">
+            </div>
+            <div class="container overflow-hidden text-center pt-9 pb-10 z-index-1">
+                <img class="mb-4" alt="logo" src="assets/img/envio/tm-transprent.png" width="250" />
+                <p class="text-white fw-semi-bold fs-4">Simple, powerful, and affordable<br /></p>
+                <!--<a class="text-black btn btn-info mt-2 mt-lg-5 mb-5"><i class="fas fa-receipt me-3"></i>Check Pricing</a>-->
+            </div>
+        </div><!-- end of .container-->
+
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="py-0">
+
+        <div class="container-fluid px-5">
+          <nav class="navbar navbar-expand navbar-light rounded border mt-6 justify-content-evenly">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link active fw-medium" data-filter=".documents" data-bs-nav="data-bs-nav">E-Invoicing</a></li>
+              <li class="nav-item"><a class="nav-link fw-medium" data-filter=".operation-settings" data-bs-nav="data-bs-nav">Operation Settings</a></li>
+            </ul>
+          </nav><a class="back-to-top bg-info" href="#"><i class="fas fa-angle-double-up"> </i></a>
+                <div class="row mt-4 grid">
+                    <div class="col mb-3 item documents">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-12 mb-3">
+                                <div class="card mb-2 bg-white card-showcase hover-expand">
+                                    <div class="card-body text-center" style="flex: 0 1 auto;">
+                                        <h4 class="card-title fw-bold text-success mb-0">Fast Submit</h4>
+                                        <div class="card-text text-dark">One Tap to Submit</div>
+                                    </div><img class="card-img-bottom" src="assets/img/envio/submission.png" alt="Submission" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12 mb-3">
+                                <div class="card mb-2 bg-white card-showcase hover-expand">
+                                    <div class="card-body text-center" style="flex: 0 1 auto;">
+                                        <h4 class="card-title fw-bold text-success mb-0">E-Invoice Printing</h4>
+                                        <div class="card-text text-dark">Get your invoice — ready to print anytime</div>
+                                    </div><img class="card-img-bottom" src="assets/img/envio/invoice-printing.png" alt="invoice-printing" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12 mb-3">
+                                <div class="card mb-2 bg-white card-showcase hover-expand">
+                                    <div class="card-body text-center" style="flex: 0 1 auto;">
+                                        <h4 class="card-title fw-bold text-success mb-0">Compliance</h4>
+                                        <div class="card-text text-dark">Fully meets LHDN e-Invoice data standards</div>
+                                    </div><img class="card-img-bottom" src="assets/img/envio/Compliance.png" alt="Compliance" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3 item operation-settings">
+                        <div class="row">
+                            <div class="col-lg-11 col-12 mb-3">
+                                <div class="card mb-2 bg-white card-showcase hover-expand">
+                                    <div class="card-body text-center" style="flex: 0 1 auto;">
+                                        <h4 class="card-title fw-bold text-primary mb-0">Company Setup</h4>
+                                        <div class="card-text text-dark">One-stop place for partner setup.</div>
+                                    </div><img class="card-img-bottom" src="assets/img/envio/ppSettings.png" alt="PartnerProfile" />
+                                </div>
+                            </div>
+                            <div class="col-lg-10 col-12 mb-3 ms-auto">
+                                <div class="card mb-2 bg-white card-showcase hover-expand">
+                                    <div class="card-body text-center" style="flex: 0 1 auto;">
+                                        <h4 class="card-title fw-bold text-primary mb-0">Product Setup</h4>
+                                        <div class="card-text text-dark">Smarter product setup starts here.</div>
+                                    </div><img class="card-img-bottom" src="assets/img/envio/icSettings.png" alt="ProductCode" />
+                                </div>
+                            </div>
+                            <div class="col-lg-11 col-12 mb-3">
+                                <div class="card mb-2 bg-white card-showcase hover-expand">
+                                    <div class="card-body text-center" style="flex: 0 1 auto;">
+                                        <h4 class="card-title fw-bold text-primary mb-0">Unit Setup</h4>
+                                        <div class="card-text text-dark">All your units, set up in seconds.</div>
+                                    </div><img class="card-img-bottom" src="assets/img/envio/iuSettings.png" alt="UnitCode" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div><!-- end of .container-->
+
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="py-0">
+
+        <div class="bg-holder  bottom-0" style="background-image:url(undefined);background-image:linear-gradient(90deg, #0d2974 -11.17%, #3498db 110.39%);">
+        </div>
+        <!--/.bg-holder-->
+
+        <div class="container-fluid">
+          <div class="bg-holder  bottom-0" style="background-image:url(assets/img/footer/footer.png);">
+          </div>
+          <!--/.bg-holder-->
+
+          <div class="bg-holder  " style="background-image:url(assets/img/footer/frame.png);background-size: auto;background-position: top;">
+          </div>
+          <!--/.bg-holder-->
+
+          <div class="container text-center pt-10 z-index-1 pb-3">
+              <h1 class="mb-4 fw-bold text-white fs-10">Ready to get started?</h1>
+              <p class="text-white fw-medium">
+                  <!--href="" target="_blank"-->
+                  <img style="width: 50%;" src="assets/img/envio/bannertm.png" alt="Enviobanner" />
+              </p>
+              <div class="row justify-content-evenly">
+                  <div class="col-12">
+                      <p class="text-white fw-medium">
+                          Contact Us through Whatsapp for demo!
+                      </p>
+                  </div>
+                  <div class="col-3">
+                      <a class="text-black btn btn-info mt-2 mt-lg-5 mb-5 d-flex align-items-center" href="https://wa.me/601135300680" target="_blank"><i class="fas fa-paper-plane"></i><span style="margin-left: 5px;">Contact Mr. Kim</span></a>
+                  </div>
+                  <div class="col-3">
+                      <a class="text-black btn btn-info mt-2 mt-lg-5 mb-5 d-flex align-items-center" href="https://wa.me/601121441368" target="_blank"><i class="fas fa-paper-plane"></i><span style="margin-left: 5px;">Contact Ms. Chim</span></a>
+                  </div>
+              </div>
+          </div>
+        </div><!-- end of .container-->
+
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+
+
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="vendors/@popperjs/popper.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="vendors/is/is.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="vendors/fontawesome/all.min.js"></script>
+    <script src="vendors/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="vendors/imagesloaded/imagesloaded.pkgd.js"></script>
+    <script src="vendors/isotope-packery/packery-mode.pkgd.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Volkhov:wght@700&amp;display=swap" rel="stylesheet">
+  </body>
+
+</html>
