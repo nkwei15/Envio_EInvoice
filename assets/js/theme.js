@@ -370,10 +370,7 @@ var isotopeFilter = function isotopeFilter() {
       if (activeLink) {
           let filterValue = activeLink.getAttribute('data-filter') || '*';
           iso.arrange({ filter: filterValue });
-          setTimeout(() => {
-              iso.layout();
-              updateGridHeight();
-          }, 1000);
+          updateGridHeight();
       }
       let cards = document.querySelectorAll('.card-showcase');
       cards.forEach(card => {
