@@ -16,7 +16,7 @@ var docReady = function docReady(fn) {
 
 var resize = function resize(fn, delay = 200) {
     let timeout;
-    window.addEventListener("resize", () => {
+    return window.addEventListener("resize", () => {
         clearTimeout(timeout);
         timeout = setTimeout(fn, delay);
     });
