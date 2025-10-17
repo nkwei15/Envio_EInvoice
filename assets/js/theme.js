@@ -295,15 +295,15 @@ var navbarInit = function navbarInit() {
           item.style.display = 'none';
           var link = item.firstChild;
           var linkItem = link.cloneNode(true);
-          document.querySelector('.category-list').appendChild(linkItem);
+          //document.querySelector('.category-list').appendChild(linkItem);
         }
       }
     });
-    var dropdownMenu = document.querySelectorAll('.dropdown-menu .nav-link');
-    dropdownMenu.forEach(function (item) {
-      item.classList.remove('nav-link');
-      item.classList.add('dropdown-item');
-    });
+    //var dropdownMenu = document.querySelectorAll('.dropdown-menu .nav-link');
+    //dropdownMenu.forEach(function (item) {
+    //  item.classList.remove('nav-link');
+    //  item.classList.add('dropdown-item');
+    //});
   };
 
   window.addEventListener('load', function (event) {
