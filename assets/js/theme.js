@@ -36,6 +36,19 @@ var getData = function getData(el, data) {
     return el.dataset[camelize(data)];
   }
 };
+
+function updateGridHeight() {
+    const grid = document.querySelector('.grid');
+    const items = grid.querySelectorAll('.item');
+    let maxBottom = 0;
+
+    items.forEach(item => {
+        const rect = item.getBoundingClientRect();
+        maxBottom = Math.max(maxBottom, rect.bottom);
+    });
+
+    grid.style.minHeight = Math.ceil(maxBottom) + 'px';
+}
 /* ----------------------------- Colors function ---------------------------- */
 
 
@@ -322,18 +335,6 @@ var navbarInit = function navbarInit() {
 |                     Isotope
 -----------------------------------------------*/
 
-function updateGridHeight() {
-    const grid = document.querySelector('.grid');
-    const items = grid.querySelectorAll('.item');
-    let maxBottom = 0;
-
-    items.forEach(item => {
-        const rect = item.getBoundingClientRect();
-        maxBottom = Math.max(maxBottom, rect.bottom);
-    });
-
-    grid.style.minHeight = Math.ceil(maxBottom) + 'px';
-}
 var isotopeFilter = function isotopeFilter() {
   window.addEventListener('load', function (event) {
     var iso = new Isotope('.grid', {
@@ -356,6 +357,13 @@ var isotopeFilter = function isotopeFilter() {
               // Filter the isotope grid
               iso.arrange({ filter: filterValue });
 
+              const grid = document.querySelector('.grid');
+              if (grid) {
+                  grid.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start'
+                  });
+              }
               // Optional: highlight active nav link
               navLinks.forEach(l => l.classList.remove('active'));
               link.classList.add('active');
@@ -389,10 +397,6 @@ var isotopeFilter = function isotopeFilter() {
 
       resize(() => {
           iso.layout();
-          updateGridHeight();
-      });
-
-      window.addEventListener('load', function (event) {
           updateGridHeight();
       });
   });
