@@ -293,10 +293,10 @@ var navbarInit = function navbarInit() {
     //});
   };
 
-  window.addEventListener('load', function (event) {
-    navbar();
-  });
-  navbar(); // Toggle bg class on window resize
+  //window.addEventListener('load', function (event) {
+  //  navbar();
+  //});
+  //navbar(); // Toggle bg class on window resize
 
   var backToToP = document.querySelector('.back-to-top');
   var navbarEl = document.querySelector('.navbar');
