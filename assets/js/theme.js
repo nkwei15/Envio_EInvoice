@@ -14,10 +14,13 @@ var docReady = function docReady(fn) {
   }
 };
 
-var resize = function resize(fn) {
-  return window.addEventListener("resize", fn);
+var resize = function resize(fn, delay = 200) {
+    let timeout;
+    window.addEventListener("resize", () => {
+        clearTimeout(timeout);
+        timeout = setTimeout(fn, delay);
+    });
 };
-
 var isIterableArray = function isIterableArray(array) {
   return Array.isArray(array) && !!array.length;
 };
