@@ -393,7 +393,6 @@ var isotopeFilter = function isotopeFilter() {
       });
 
       window.addEventListener('load', function (event) {
-          iso.layout();
           updateGridHeight();
       });
   });
