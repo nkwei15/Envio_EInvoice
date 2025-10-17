@@ -370,7 +370,6 @@ var isotopeFilter = function isotopeFilter() {
       if (activeLink) {
           let filterValue = activeLink.getAttribute('data-filter') || '*';
           iso.arrange({ filter: filterValue });
-          updateGridHeight();
       }
       let cards = document.querySelectorAll('.card-showcase');
       cards.forEach(card => {
@@ -393,6 +392,10 @@ var isotopeFilter = function isotopeFilter() {
           updateGridHeight();
       });
 
+      window.addEventListener('load', function (event) {
+          iso.layout();
+          updateGridHeight();
+      });
   });
 };
 /* -------------------------------------------------------------------------- */
