@@ -34,6 +34,7 @@
             border-radius: 4px;
             padding: 5px;
         }
+
         .hover-expand {
             position: relative;
             overflow: visible;
@@ -46,6 +47,7 @@
                 overflow: hidden;
                 max-height: 180px; /* collapsed (approx. 50%) */
                 transition: max-height 1s ease;
+                cursor: pointer;
             }
 
                 .hover-expand::after {
@@ -70,7 +72,12 @@
                         opacity: 0;
                     }
         }
-        
+        .grid {
+            transition: 1s ease;
+        }
+        .item{
+            transition: 1s ease;
+        }
     </style>
 </head>
 
@@ -115,8 +122,8 @@
         <div class="container-fluid px-5">
           <nav class="navbar navbar-expand navbar-light rounded border mt-6 justify-content-evenly">
             <ul class="navbar-nav">
-              <li class="nav-item"><a class="nav-link active fw-medium" data-filter=".documents" data-bs-nav="data-bs-nav">E-Invoicing</a></li>
-              <li class="nav-item"><a class="nav-link fw-medium" data-filter=".operation-settings" data-bs-nav="data-bs-nav">Operation Settings</a></li>
+              <li class="nav-item"><a class="nav-link active fw-medium" style="cursor: pointer;" data-filter=".documents" data-bs-nav="data-bs-nav">E-Invoicing</a></li>
+              <li class="nav-item"><a class="nav-link fw-medium" style="cursor: pointer;" data-filter=".operation-settings" data-bs-nav="data-bs-nav">Operation Settings</a></li>
             </ul>
           </nav><a class="back-to-top bg-info" href="#"><i class="fas fa-angle-double-up"> </i></a>
                 <div class="row mt-4 grid">
@@ -215,11 +222,15 @@
                           Contact Us through Whatsapp for demo!
                       </p>
                   </div>
-                  <div class="col-3">
-                      <a class="text-black btn btn-info mt-2 mt-lg-5 mb-5 d-flex align-items-center" href="https://wa.me/601135300680" target="_blank"><i class="fas fa-paper-plane"></i><span style="margin-left: 5px;">Contact Mr. Kim</span></a>
+                  <div class="col-auto">
+                      <a class="btn btn-info text-black mt-2 d-inline-flex w-auto"
+                         href="https://wa.me/601135300680" target="_blank">
+                          <i class="fas fa-paper-plane"></i>
+                          <span class="ms-2">Contact Mr. Kim</span>
+                      </a>
                   </div>
-                  <div class="col-3">
-                      <a class="text-black btn btn-info mt-2 mt-lg-5 mb-5 d-flex align-items-center" href="https://wa.me/601121441368" target="_blank"><i class="fas fa-paper-plane"></i><span style="margin-left: 5px;">Contact Ms. Chim</span></a>
+                  <div class="col-auto">
+                      <a class="text-black btn btn-info mt-2 d-inline-flex w-auto" href="https://wa.me/601121441368" target="_blank"><i class="fas fa-paper-plane"></i><span class="ms-2">Contact Ms. Chim</span></a>
                   </div>
               </div>
           </div>

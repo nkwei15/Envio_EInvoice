@@ -322,7 +322,18 @@ var navbarInit = function navbarInit() {
 |                     Isotope
 -----------------------------------------------*/
 
+function updateGridHeight() {
+    const grid = document.querySelector('.grid');
+    const items = grid.querySelectorAll('.item');
+    let maxBottom = 0;
 
+    items.forEach(item => {
+        const rect = item.getBoundingClientRect();
+        maxBottom = Math.max(maxBottom, rect.bottom);
+    });
+
+    grid.style.minHeight = Math.ceil(maxBottom) + 'px';
+}
 var isotopeFilter = function isotopeFilter() {
   window.addEventListener('load', function (event) {
     var iso = new Isotope('.grid', {
@@ -376,25 +387,11 @@ var isotopeFilter = function isotopeFilter() {
           });
       });
 
-      window.addEventListener('resize', () => {
+      resize(() => {
           iso.layout();
           updateGridHeight();
       });
 
-      function updateGridHeight() {
-          const grid = document.querySelector('.grid');
-          const items = grid.querySelectorAll('.item');
-          let maxBottom = 0;
-
-          items.forEach(item => {
-              const rect = item.getBoundingClientRect();
-              maxBottom = Math.max(maxBottom, rect.bottom);
-          });
-
-          grid.style.minHeight = Math.ceil(maxBottom) + 'px';
-      }
-
-      window.addEventListener('resize', () => iso.layout());
   });
 };
 /* -------------------------------------------------------------------------- */
